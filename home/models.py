@@ -12,5 +12,5 @@ class Student(models.Model):
     sex = models.CharField(max_length=200, null=True)
     address = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True)
-    birthday = models.DateField(null=True)
+    birthday = models.DateField('Birthday (d/m/Y)', null=True)
     email = models.CharField(max_length=200, null=True)
