@@ -1,8 +1,6 @@
 /venv
 .idea
 db.sqlite3
-
-
 # Environments
 .env
 env/
@@ -33,6 +31,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-
-
