@@ -3,8 +3,8 @@ python:
 
   - "3.8"
 
-before_script:
-  - easy_install distribute
+install:
   - pip install -r requirements.txt
 
-
+script:
+  - flake8 ./venv/app.py
