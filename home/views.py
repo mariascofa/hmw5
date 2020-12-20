@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from home.forms import StudentForm
 from home.models import Student
@@ -12,6 +11,7 @@ def show_all_students(request):
         context={'Students': students, })
 
 def create_students(request):
+
     if request.method == "GET":
         student_form = StudentForm()
         context = {"form": student_form, }
@@ -21,4 +21,3 @@ def create_students(request):
         if student_form.is_valid():
             student_form.save()
         return redirect('/students')
-
