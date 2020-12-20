@@ -1,6 +1,8 @@
 from django.core.management import BaseCommand
 from faker import Faker
 from home.models import Student
+
+
 class Command(BaseCommand):
 
     help = "Insert new students in the system"
