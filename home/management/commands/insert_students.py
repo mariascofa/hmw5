@@ -6,8 +6,8 @@ class Command(BaseCommand):
     help = "Insert new students in the system"
 
     def add_arguments(self, parser):
-        
         """This function is parsing all the arguments."""
+
         parser.add_argument("-l", "--len", type=int, default=10)
 
     def handle(self, *args, **options):
@@ -15,6 +15,7 @@ class Command(BaseCommand):
         """This function initializes Faker and
         generates information for the each field
         in the model "Student"."""
+
         faker = Faker()
 
         for _ in range(options['len']):
