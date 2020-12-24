@@ -20,6 +20,7 @@ class Command(BaseCommand):
 
         faker = Faker()
 
+
         for _ in range(options['len']):
             student = Student()
             student.name = faker.first_name()
@@ -30,4 +31,5 @@ class Command(BaseCommand):
             student.description = faker.text()
             student.birthday = faker.date_of_birth()
             student.email = faker.email()
+            student.social_url = "https://www.instagram.com/" + student.name + student.surname
             student.save()
