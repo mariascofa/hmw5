@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Form</title>
+    <title>Title</title>
 </head>
 <body>
 
 
-<form action="{% url 'create' %}" method="POST">
+<form action="{% url 'update' id=student_id %}" method="POST">
     <input type = "hidden" name= "csrf_token" value="{{csrf_token}}">
     {% csrf_token %}
     {{ form }}
