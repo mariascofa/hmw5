@@ -1,0 +1,103 @@
+INFO:root:proccess <function LogMiddleware.process_view at 0x7fb32cbb10d0>
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f4775771160>
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f1cc80a9ee0>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f1280eda1f0>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function UpdateView at 0x7ff575df5c10>
+INFO:root:proccess <function UpdateView at 0x7ff575df5c10>
+INFO:root:proccess <function StudentView at 0x7ff575df5af0>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7fe0e9e0c040>
+INFO:root:proccess <function UpdateView at 0x7fe0e97c4700>
+INFO:root:proccess <function UpdateView at 0x7fe0e97c4700>
+INFO:root:proccess <function StudentView at 0x7fe0e97c45e0>
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f79b74d0160>
+INFO:root:proccess <function StudentView at 0x7f79b6e8f160>
+INFO:root:proccess <function CreateView at 0x7f79b6e8f1f0>
+INFO:root:proccess <function CreateView at 0x7f79b6e8f1f0>
+INFO:root:proccess <function StudentView at 0x7f79b6e8f160>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7fece345faf0>
+INFO:root:proccess <function UpdateView at 0x7fece2d9c550>
+INFO:root:proccess <function UpdateView at 0x7fece2d9c550>
+INFO:root:proccess <function StudentView at 0x7fece2d9c430>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7fe800cbbf70>
+INFO:root:proccess <function StudentView at 0x7fe8005f9790>
+INFO:root:proccess <function UpdateView at 0x7fe8005f98b0>
+INFO:root:proccess <function UpdateView at 0x7fe8005f98b0>
+INFO:root:proccess <function StudentView at 0x7fe8005f9790>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:proccess <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:proccess <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f310aeb7dc0>
+INFO:root:response <function LogMiddleware.process_response at 0x7f310aeb7c10>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7f12aad1fee0>
+INFO:root:response <function LogMiddleware.process_response at 0x7f12aad1fca0>
+INFO:root:proccess <function UpdateView at 0x7f12aa65eb80>
+INFO:root:proccess <function UpdateView at 0x7f12aa65eb80>
+INFO:root:proccess <function StudentView at 0x7f12aa65ea60>
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LogMiddleware.process_view at 0x7ffb1cd9cdc0>
+INFO:root:response <function LogMiddleware.process_response at 0x7ffb1cd9cca0>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:root:proccess <function LoggsMiddleware.process_view at 0x7ff9539cfc10>
+INFO:root:response <function LoggsMiddleware.process_response at 0x7ff9539cfe50>
+INFO:root:proccess <function UpdateView at 0x7ff95330c820>
+INFO:root:proccess <function UpdateView at 0x7ff95330c820>
+INFO:root:proccess <function StudentView at 0x7ff95330c700>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f9162aa8dc0>
+INFO:root:response <function LoggsMiddleware.process_response at 0x7f9162aa8e50>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:proccess <function LoggsMiddleware.process_view at 0x7fce61e58dc0>
+INFO:root:response <function LoggsMiddleware.process_response at 0x7fce61e58ca0>
+INFO:root:proccess <function UpdateView at 0x7fce617968b0>
+INFO:root:proccess <function UpdateView at 0x7fce617968b0>
+INFO:root:proccess <function StudentView at 0x7fce61796790>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f4cdfeaaee0>
+INFO:root:response <function LoggsMiddleware.process_response at 0x7f4cdfeaadc0>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f8a47565d30>
+INFO:root:response <function LoggsMiddleware.process_response at 0x7f8a47565e50>
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:response <HttpResponseNotFound status_code=404, "text/html">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
