@@ -26,7 +26,6 @@ class Command(BaseCommand):
             student.name = faker.first_name()
             student.surname = faker.last_name()
             student.age = faker.random_int(min=18, max=80)
-            student.sex = faker.simple_profile()["sex"]
             student.address = faker.address()
             student.description = faker.text()
             student.birthday = faker.date_of_birth()

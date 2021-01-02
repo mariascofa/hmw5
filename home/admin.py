@@ -6,14 +6,14 @@ from home.models import Student
 
 
 class StudentAdmin(ModelAdmin):
-    """This class displays records of the project that needs to
+    """Displays records of the project that needs to
     be created, updated, reviewed or deleted."""
 
     list_display = ('email', "custom_field", 'birthday')
     readonly_fields = ("custom_field",)
 
     def custom_field(self, instance):
-        """This function join student's name and the surname
+        """Joins student's name and the surname
          into one field, that work as
          a link to the student's social network page. """
         full_name = instance.name + " " + instance.surname

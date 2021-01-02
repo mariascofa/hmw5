@@ -50,7 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 
-    'hmw5.middleware.LoggsMiddleware',
+    'hmw5.middleware.RawDataMiddleware',
+    'hmw5.middleware.LogMiddleware',
+    'hmw5.middleware.IdentifyResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'hmw5.urls'

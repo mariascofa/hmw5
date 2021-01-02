@@ -6,9 +6,9 @@ from home.forms import StudentForm
 from home.models import Student
 
 class StudentView(View):
-    """This class displays a complete list of all students"""
+    """Displays a complete list of all students"""
     def get(self, request):
-        """This function gets all the data info of the each
+        """Gets all the data info of the each
         student in the model and transfers it to the template"""
         students = Student.objects.all()
         return render(
@@ -18,17 +18,17 @@ class StudentView(View):
 
 
 class CreateView (View):
-    """This class allows you to create new students
+    """Allows you to create new students
     through a form and add their info to the database."""
     def get(self, request):
-        """This function generates the form and transfers it to the template."""
+        """Generates the form and transfers it to the template."""
 
         student_form = StudentForm()
         context = {"form": student_form, }
         return render(request, "form_index.html", context=context)
 
     def post(self, request):
-        """This function gets data from a form and
+        """Gets data from a form and
         saves it to the table (in case if all the info
         is valid)."""
         student_form = StudentForm(request.POST)
@@ -38,10 +38,10 @@ class CreateView (View):
         return redirect(reverse('students'))
 
 class UpdateView(View):
-    """This class allows you to update student's info
+    """Allows you to update student's info
     through a form and add updated info to the database."""
     def get (self, request, id):
-        """This function gets a date of the student under
+        """Gets a date of the student under
         selected id, generates a form with the info
         of this student. User can update all the info in this form."""
         students = get_object_or_404(Student, id=id)
@@ -50,7 +50,7 @@ class UpdateView(View):
         return render(request, "update.html", context=context)
 
     def post (self, request, id):
-        """This function gets updated data from a form and
+        """Gets updated data from a form and
         saves it to the table (in case if all the info
         is valid)."""
         students = get_object_or_404(Student, id=id)

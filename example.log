@@ -1,103 +1,305 @@
-INFO:root:proccess <function LogMiddleware.process_view at 0x7fb32cbb10d0>
-WARNING:django.request:Not Found: /favicon.ico
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f4775771160>
-WARNING:django.request:Not Found: /favicon.ico
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f1cc80a9ee0>
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f1280eda1f0>
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function UpdateView at 0x7ff575df5c10>
-INFO:root:proccess <function UpdateView at 0x7ff575df5c10>
-INFO:root:proccess <function StudentView at 0x7ff575df5af0>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7fe0e9e0c040>
-INFO:root:proccess <function UpdateView at 0x7fe0e97c4700>
-INFO:root:proccess <function UpdateView at 0x7fe0e97c4700>
-INFO:root:proccess <function StudentView at 0x7fe0e97c45e0>
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f79b74d0160>
-INFO:root:proccess <function StudentView at 0x7f79b6e8f160>
-INFO:root:proccess <function CreateView at 0x7f79b6e8f1f0>
-INFO:root:proccess <function CreateView at 0x7f79b6e8f1f0>
-INFO:root:proccess <function StudentView at 0x7f79b6e8f160>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7fece345faf0>
-INFO:root:proccess <function UpdateView at 0x7fece2d9c550>
-INFO:root:proccess <function UpdateView at 0x7fece2d9c550>
-INFO:root:proccess <function StudentView at 0x7fece2d9c430>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7fe800cbbf70>
-INFO:root:proccess <function StudentView at 0x7fe8005f9790>
-INFO:root:proccess <function UpdateView at 0x7fe8005f98b0>
-INFO:root:proccess <function UpdateView at 0x7fe8005f98b0>
-INFO:root:proccess <function StudentView at 0x7fe8005f9790>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:proccess <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
-INFO:root:proccess <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f310aeb7dc0>
-INFO:root:response <function LogMiddleware.process_response at 0x7f310aeb7c10>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7f12aad1fee0>
-INFO:root:response <function LogMiddleware.process_response at 0x7f12aad1fca0>
-INFO:root:proccess <function UpdateView at 0x7f12aa65eb80>
-INFO:root:proccess <function UpdateView at 0x7f12aa65eb80>
-INFO:root:proccess <function StudentView at 0x7f12aa65ea60>
+INFO:root:Hash value for request is 3379930241658818331
+ERROR:django.request:Internal Server Error: /students/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
 WARNING:django.request:Not Found: /favicon.ico
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LogMiddleware.process_view at 0x7ffb1cd9cdc0>
-INFO:root:response <function LogMiddleware.process_response at 0x7ffb1cd9cca0>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-DEBUG:asyncio:Using selector: EpollSelector
-INFO:root:proccess <function LoggsMiddleware.process_view at 0x7ff9539cfc10>
-INFO:root:response <function LoggsMiddleware.process_response at 0x7ff9539cfe50>
-INFO:root:proccess <function UpdateView at 0x7ff95330c820>
-INFO:root:proccess <function UpdateView at 0x7ff95330c820>
-INFO:root:proccess <function StudentView at 0x7ff95330c700>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f9162aa8dc0>
-INFO:root:response <function LoggsMiddleware.process_response at 0x7f9162aa8e50>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:proccess <function LoggsMiddleware.process_view at 0x7fce61e58dc0>
-INFO:root:response <function LoggsMiddleware.process_response at 0x7fce61e58ca0>
-INFO:root:proccess <function UpdateView at 0x7fce617968b0>
-INFO:root:proccess <function UpdateView at 0x7fce617968b0>
-INFO:root:proccess <function StudentView at 0x7fce61796790>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f4cdfeaaee0>
-INFO:root:response <function LoggsMiddleware.process_response at 0x7f4cdfeaadc0>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:proccess <function LoggsMiddleware.process_view at 0x7f8a47565d30>
-INFO:root:response <function LoggsMiddleware.process_response at 0x7f8a47565e50>
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:response <HttpResponseNotFound status_code=404, "text/html">
-WARNING:django.request:Not Found: /favicon.ico
-INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -6748516176066584393
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+ERROR:django.request:Internal Server Error: /students/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py", line 41, in process_request
+    response= self.process_response
+AttributeError: 'IdentifyResponseMiddleware' object has no attribute 'process_response'
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=500, "text/html">
+INFO:root:Hash value for request is -6748516176066584393
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+ERROR:django.request:Internal Server Error: /students/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py", line 41, in process_request
+    response= self.process_response
+AttributeError: 'IdentifyResponseMiddleware' object has no attribute 'process_response'
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=500, "text/html">
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
-INFO:root:response <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
-INFO:root:response <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 1265314659363933318
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 3265424380011035029
+INFO:root:Request <WSGIRequest: GET '/students/update/5/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: GET '/students/update/5/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 3265424380011035029
+INFO:root:Request <WSGIRequest: POST '/students/update/5/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: POST '/students/update/5/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 1265314659363933318
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:Hash value for request is -1882123823623999796
+ERROR:django.request:Internal Server Error: /students/update/4/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'dict' object has no attribute 'status_code'
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:Hash value for request is -568956041303839193
+INFO:root:Request <WSGIRequest: GET '/students/update/4/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: GET '/students/update/4/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -568956041303839193
+INFO:root:Request <WSGIRequest: POST '/students/update/4/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: POST '/students/update/4/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 7066365763459337327
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
+INFO:root:Hash value for request is 6211309780161916412
+INFO:root:Request <WSGIRequest: GET '/students/update/4/'> View name update route students/update/<id>/
+ERROR:django.request:Internal Server Error: /students/update/4/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py", line 41, in process_request
+    response= self.process_response.hashed
+AttributeError: 'IdentifyResponseMiddleware' object has no attribute 'process_response'
+INFO:root:For request <WSGIRequest: GET '/students/update/4/'> response is <HttpResponse status_code=500, "text/html">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:Hash value for request is -4578468920403811268
+ERROR:django.request:Internal Server Error: /students/update/4/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'int' object has no attribute 'status_code'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is -8615876721516860740
+ERROR:django.request:Internal Server Error: /students/update/4/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'int' object has no attribute 'status_code'
+INFO:root:Hash value for request is -8615876721516860740
+ERROR:django.request:Internal Server Error: /students/update/4/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'int' object has no attribute 'status_code'
+INFO:root:Hash value for request is -8674422340079897975
+ERROR:django.request:Internal Server Error: /students/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'int' object has no attribute 'status_code'
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:Hash value for request is -6393116728628265527
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 9130713524416507521
+INFO:root:Request <WSGIRequest: GET '/students/update/3/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: GET '/students/update/3/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 9130713524416507521
+INFO:root:Request <WSGIRequest: POST '/students/update/3/'> View name update route students/update/<id>/
+INFO:root:For request <WSGIRequest: POST '/students/update/3/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is -6393116728628265527
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/settings.py changed, reloading.
+INFO:root:Hash value for request is 7127707115079739715
+INFO:root:Request <WSGIRequest: GET '/students/update/5/'> View name update route students/update/<id>/
+INFO:root:For hashed request 7127707115079739715 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fdc7d7bc340>>
+INFO:root:For request <WSGIRequest: GET '/students/update/5/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/5/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 7127707115079739715
+INFO:root:Request <WSGIRequest: POST '/students/update/5/'> View name update route students/update/<id>/
+INFO:root:For hashed request 7127707115079739715 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fdc7d7bc340>>
+INFO:root:For request <WSGIRequest: POST '/students/update/5/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/5/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 1010227217760658930
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 1010227217760658930 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fdc7d7bc340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/__init__.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/apps.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/models.py changed, reloading.
+INFO:root:Hash value for request is -6669837774476654429
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -6669837774476654429 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f41075b4340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is 1395841844256059180
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 1395841844256059180 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f5135220340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -112847741257513170
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -112847741257513170 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fec0fd1c340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -112847741257513170
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -112847741257513170 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fec0fd1c340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -112847741257513170
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -112847741257513170 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fec0fd1c340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -112847741257513170
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -112847741257513170 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fec0fd1c340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -2780711194019866259
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -2780711194019866259 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fcd03069340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -4753566878454568391
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -4753566878454568391 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f733bd6c340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -7009992103463607176
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -7009992103463607176 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f064f4de340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 7101404290264597152
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 7101404290264597152 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fa383151340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is 3139132773279121278
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 3139132773279121278 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f491bff6340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 7569604024980698738
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 7569604024980698738 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f6fead6a340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 2594326461162671330
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 2594326461162671330 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f9e1040f340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -4529721369578173327
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -4529721369578173327 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fbcbafec340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/models.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -2435170703421924463
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -2435170703421924463 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fefb1d80340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 5327676606899973412
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 5327676606899973412 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fada5a38340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -326832265708566323
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -326832265708566323 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f1f437ae340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is 2771397662324110846
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 2771397662324110846 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fc63fe72340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is -3363696415903102791
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -3363696415903102791 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f06e476f340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -3659208149725678594
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -3659208149725678594 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f94ab3f7370>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -3950726912321358011
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -3950726912321358011 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7fbc01c0d340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is -3151353261860345413
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -3151353261860345413 response is <bound method IdentifyResponseMiddleware.process_response of <hmw5.middleware.IdentifyResponseMiddleware object at 0x7f9fc3521340>>
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/admin.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
