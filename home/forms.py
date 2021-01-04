@@ -3,7 +3,7 @@ from home.models import Student
 
 
 class StudentForm(ModelForm):
-    """Class with a data base info"""
+    """Data base info"""
     class Meta:
         model = Student
         fields = ["name", "surname", "age", "sex", "address",
