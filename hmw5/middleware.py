@@ -39,15 +39,12 @@ class IdentifyResponseMiddleware(MiddlewareMixin):
     created at the time of receiving the request (RawDataMiddleware)."""
 
     def process_response(self, request, response):
-        """Gets response info and writes it into logs."""
-        logging.info('For request %s response is %s', request, response)
+        """Gets response info and writes it into logs.
+        Gets info about hashed request from META and shows connection
+        between hash_request and response."""
+        hash_request = request.META['hashed']
+        logging.info(
+            'For hashed request %s response is %s', hash_request, response)
         return response
 
 
-    def process_request(self, request):
-        """Gets info about hashed request from META and shows connection
-        between hash_request and response."""
-        hash_request = request.META['hashed']
-        response= self.process_response
-        logging.info(
-            'For hashed request %s response is %s', hash_request, response)

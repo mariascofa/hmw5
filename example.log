@@ -303,3 +303,34 @@ INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/mid
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
 INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/signals.py changed, reloading.
+INFO:root:Hash value for request is 2267040788558745913
+INFO:root:Request <WSGIRequest: GET '/students/update/73/'> View name update route students/update/<id>/
+INFO:root:For hashed request 2267040788558745913 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/73/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 2267040788558745913
+INFO:root:Request <WSGIRequest: POST '/students/update/73/'> View name update route students/update/<id>/
+INFO:root:For hashed request 2267040788558745913 response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/73/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is -4484951051859884452
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -4484951051859884452 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
+INFO:root:Hash value for request is -5019850218977194698
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:****For hashed request -5019850218977194698 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -2076869861396322838
+INFO:root:Request <WSGIRequest: GET '/students/update/71/'> View name update route students/update/<id>/
+INFO:root:****For hashed request -2076869861396322838 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/71/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -2076869861396322838
+INFO:root:Request <WSGIRequest: POST '/students/update/71/'> View name update route students/update/<id>/
+INFO:root:****For hashed request -2076869861396322838 response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/71/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is -5019850218977194698
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:****For hashed request -5019850218977194698 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/hmw5/middleware.py changed, reloading.
