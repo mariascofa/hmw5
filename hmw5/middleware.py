@@ -46,5 +46,3 @@ class IdentifyResponseMiddleware(MiddlewareMixin):
         logging.info(
             'For hashed request %s response is %s', hash_request, response)
         return response
-
-
