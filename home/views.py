@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views.generic.base import View
+from crispy_forms.utils import render_crispy_form
+from django.template.context_processors import csrf
 
 from home.forms import StudentForm
 from home.models import Student
@@ -14,7 +16,7 @@ class StudentView(View):
         return render(
             request=request,
             template_name='index.html',
-            context={'Students': students, })
+            context={"students": students, "title" : "Students"} )
 
 
 class CreateView (View):
@@ -24,7 +26,7 @@ class CreateView (View):
         """Generates the form and transfers it to the template."""
 
         student_form = StudentForm()
-        context = {"form": student_form, }
+        context = {"form": student_form, "title" : "Create" }
         return render(request, "form_index.html", context=context)
 
     def post(self, request):
@@ -46,7 +48,7 @@ class UpdateView(View):
         of this student. User can update all the info in this form."""
         students = get_object_or_404(Student, id=id)
         student_form = StudentForm(instance=students)
-        context = {"form": student_form, "student_id": students.id}
+        context = {"form": student_form, "student": students, "title" : "Update"}
         return render(request, "update.html", context=context)
 
     def post (self, request, id):
@@ -54,7 +56,10 @@ class UpdateView(View):
         saves it to the table (in case if all the info
         is valid)."""
         students = get_object_or_404(Student, id=id)
+        # ctx = {}
+        # ctx.update(csrf(request))
         student_form = StudentForm(request.POST, instance=students)
+        # form_html = render_crispy_form(student_form, context=ctx)
         if student_form.is_valid():
-            student_form.save()
+            student_form .save()
         return redirect(reverse('students'))
