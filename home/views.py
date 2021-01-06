@@ -16,7 +16,7 @@ class StudentView(View):
         return render(
             request=request,
             template_name='index.html',
-            context={'Students': students, "title" : "Students"} )
+            context={"Students": students, "title" : "Students"} )
 
 
 class CreateView (View):
