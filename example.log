@@ -7122,3 +7122,107 @@ INFO:root:Request <WSGIRequest: GET '/students/'> View name students route stude
 INFO:root:For hashed request 7541688960885938348 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
 INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
 WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 3630583832964337292
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 3630583832964337292 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -59043254932988537
+INFO:root:Request <WSGIRequest: GET '/students/update/70/'> View name update route students/update/<id>/
+INFO:root:For hashed request -59043254932988537 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/70/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -59043254932988537
+INFO:root:Request <WSGIRequest: POST '/students/update/70/'> View name update route students/update/<id>/
+INFO:root:For hashed request -59043254932988537 response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/70/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 3630583832964337292
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 3630583832964337292 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -8688852521291711890
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request -8688852521291711890 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 3597927380466400164
+INFO:root:Request <WSGIRequest: GET '/students/update/70/'> View name update route students/update/<id>/
+ERROR:django.request:Internal Server Error: /students/update/70/
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/views.py", line 52, in get
+    return render(request, "update.html", context=context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update' with keyword arguments '{'id': ''}' not found. 1 pattern(s) tried: ['students/update/(?P<id>[^/]+)/$']
+INFO:root:For hashed request 3597927380466400164 response is <HttpResponse status_code=500, "text/html">
+INFO:root:For request <WSGIRequest: GET '/students/update/70/'> response is <HttpResponse status_code=500, "text/html">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/views.py changed, reloading.
+INFO:root:Hash value for request is 8736274322417033163
+INFO:root:Request <WSGIRequest: GET '/students/update/70/'> View name update route students/update/<id>/
+INFO:root:For hashed request 8736274322417033163 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/70/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is 8736274322417033163
+INFO:root:Request <WSGIRequest: POST '/students/update/70/'> View name update route students/update/<id>/
+INFO:root:For hashed request 8736274322417033163 response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/70/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 450062231784679174
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 450062231784679174 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:django.utils.autoreload:/home/ubuntu/PycharmProjects/Homewrk5/hmw5/home/views.py changed, reloading.
+INFO:root:Hash value for request is 746378762135651568
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 746378762135651568 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Hash value for request is -240237726710100759
+INFO:root:Request <WSGIRequest: GET '/students/update/69/'> View name update route students/update/<id>/
+INFO:root:For hashed request -240237726710100759 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/update/69/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:Hash value for request is -240237726710100759
+INFO:root:Request <WSGIRequest: POST '/students/update/69/'> View name update route students/update/<id>/
+INFO:root:For hashed request -240237726710100759 response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:For request <WSGIRequest: POST '/students/update/69/'> response is <HttpResponseRedirect status_code=302, "text/html; charset=utf-8", url="/students/">
+INFO:root:Hash value for request is 746378762135651568
+INFO:root:Request <WSGIRequest: GET '/students/'> View name students route students/
+INFO:root:For hashed request 746378762135651568 response is <HttpResponse status_code=200, "text/html; charset=utf-8">
+INFO:root:For request <WSGIRequest: GET '/students/'> response is <HttpResponse status_code=200, "text/html; charset=utf-8">

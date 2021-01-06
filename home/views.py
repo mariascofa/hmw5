@@ -16,7 +16,7 @@ class StudentView(View):
         return render(
             request=request,
             template_name='index.html',
-            context={'Students': students, "title" : "Students"} )
+            context={"students": students, "title" : "Students"} )
 
 
 class CreateView (View):
@@ -48,7 +48,7 @@ class UpdateView(View):
         of this student. User can update all the info in this form."""
         students = get_object_or_404(Student, id=id)
         student_form = StudentForm(instance=students)
-        context = {"form": student_form, "student_id": students.id, "title" : "Update"}
+        context = {"form": student_form, "student": students, "title" : "Update"}
         return render(request, "update.html", context=context)
 
     def post (self, request, id):

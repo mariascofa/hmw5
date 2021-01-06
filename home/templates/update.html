@@ -7,7 +7,7 @@
 {% block body_content %}
 
 
-<form action="{% url 'update' id=student_id %}" method="POST" >
+<form action="{% url 'update' id=student.id %}" method="POST" >
     <input type = "hidden" name= "csrf_token" value="{{csrf_token}}">
     {% csrf_token %}
 
@@ -47,4 +47,4 @@
 
 
 
-{% endblock %
+{% endblock %}
