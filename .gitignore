@@ -35,4 +35,5 @@ dmypy.json
 cython_debug/
 
 
-.log
+.log/
+example.log
