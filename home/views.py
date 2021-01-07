@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views.generic.base import View
+from home.tasks import compile_task
 from crispy_forms.utils import render_crispy_form
-from django.template.context_processors import csrf
+
 
 from home.forms import StudentForm
 from home.models import Student
@@ -12,6 +13,7 @@ class StudentView(View):
     def get(self, request):
         """Gets all the data info of the each
         student in the model and transfers it to the template"""
+        compile_task.delay()
         students = Student.objects.all()
         return render(
             request=request,
