@@ -10,7 +10,7 @@ class StudentAdmin(ModelAdmin):
     be created, updated, reviewed or deleted."""
 
     list_display = ('email', "custom_field", 'birthday')
-    readonly_fields = ("custom_field",)
+
 
     def custom_field(self, instance):
         """Joins student's name and the surname
