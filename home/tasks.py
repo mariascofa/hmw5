@@ -1,13 +1,13 @@
 from hmw5.celery import app
-from celery import chain
+from celery import chain, shared_task
 
-@app.task
+@shared_task
 def add (*args):
     return sum (args)
 
 
 
-@app.task
+@shared_task
 def compile_task ():
     chain (
         add.s(4,6)

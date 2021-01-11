@@ -10,3 +10,4 @@ app.autodiscover_tasks()
 @app.task(bind=True)
 def task_test(self):
     return 2 + 2
+
