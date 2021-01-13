@@ -15,7 +15,9 @@ class Command(BaseCommand):
         parser.add_argument("-l", "--len", type=int, default=10)
 
     def handle(self, *args, **options):
-        # для работы с Faker надо его заинициализировать
+        """This function initializes Faker and
+        generates information for the each field
+        in the model "Student"."""
         faker = Faker()
 
         for _ in range(options['len']):
