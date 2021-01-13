@@ -1,6 +1,8 @@
+import uuid
+
 from django.core.management import BaseCommand
 from faker import Faker
-from home.models import Student
+from home.models import Student, Subject, Book, Teacher
 
 
 class Command(BaseCommand):
@@ -13,15 +15,17 @@ class Command(BaseCommand):
         parser.add_argument("-l", "--len", type=int, default=10)
 
     def handle(self, *args, **options):
-
-        """This function initializes Faker and
-        generates information for the each field
-        in the model "Student"."""
-
+        # для работы с Faker надо его заинициализировать
         faker = Faker()
 
-
         for _ in range(options['len']):
+            self.stdout.write('Start inserting Students')
+            book = Book()
+            book.title = uuid.uuid4()
+            book.save()
+
+            subject, _ = Subject.objects.get_or_create(title='Python')
+
             student = Student()
             student.name = faker.first_name()
             student.surname = faker.last_name()
@@ -32,3 +36,13 @@ class Command(BaseCommand):
             student.email = faker.email()
             student.social_url = "https://www.instagram.com/" + student.name + student.surname
             student.save()
+            student.book = book
+            student.subject = subject
+            student.save()
+
+
+            teacher, _ = Teacher.objects.get_or_create(name=faker.name())
+            teacher.students.add (student)
+            teacher.save()
+
+        self.stdout.write('End inserting Students')
