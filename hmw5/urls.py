@@ -15,15 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import StudentView, CreateView, UpdateView
-
-
+from home.views import StudentView, CreateView, UpdateView, BookView, SubjectView, TeachersView, BookDeleteView, \
+    SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/', StudentView.as_view(), name='students'),
+    path('subjects/', SubjectView.as_view(), name='subjects'),
+    path('teachers/', TeachersView.as_view(), name='teachers'),
+    path('', StudentView.as_view(), name='students'),
     path("students/create/", CreateView.as_view(), name='create'),
-    path("students/update/<id>/", UpdateView.as_view(), name="update")
+    path("students/update/<id>/", UpdateView.as_view(), name="update"),
+    path("books/", BookView.as_view(), name="book"),
+    path("books/delete/<id>/", BookDeleteView.as_view(), name="delete_book"),
+    path("subjects/update/<id>/", SubjectUpdateView.as_view(), name="update_subject"),
+    path("subjects/delete/<subject_id>/<student_id>/", DeleteSubjectView.as_view(), name="student_subject"),
+    path("teachers/update/<id>/", TeacherUpdateView.as_view(), name="update_teacher"),
+    path("teachers/delete/<student_id>/<teacher_id>/", TeacherDeleteView.as_view(), name="delete_teacher"),
+    path("subjects/update/<subject_id>/<student_id>/", AddStudentView.as_view(), name="add_student"),
+    path("teacher/update/<teacher_id>/<student_id>/", TeacherStudentView.as_view(), name="teacher_student"),
 ]
 
