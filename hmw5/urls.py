@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import StudentView, CreateView, UpdateView, BookView, SubjectView, TeachersView, BookDeleteView, \
-    SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView
+    SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView,\
+    CurrencyView
+
 
 
 urlpatterns = [
+    path('currency/', CurrencyView.as_view(), name='currency'),
     path('admin/', admin.site.urls),
     path('subjects/', SubjectView.as_view(), name='subjects'),
     path('teachers/', TeachersView.as_view(), name='teachers'),

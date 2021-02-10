@@ -15,6 +15,8 @@ from pathlib import Path
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from celery.schedules import crontab, solar
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -136,3 +138,11 @@ STATIC_URL = '/static/'
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'db+sqlite:///celery_results.sqlite3'
 
+
+CELERY_BEAT_SCHEDULE = {
+    'update_transaction_status': {
+        'task': 'home.tasks.compile_task',
+        'schedule': solar('sunset', 46.429206, 30.722512),
+        'schedule': solar('sunrise', 46.429206, 30.722512),
+    },
+}

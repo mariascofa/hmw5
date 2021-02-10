@@ -7,7 +7,7 @@ from crispy_forms.utils import render_crispy_form
 from home.filter import StudentFilter
 
 from home.forms import StudentForm, SubjectForm, TeacherForm
-from home.models import Student, Book, Subject, Teacher
+from home.models import Student, Book, Subject, Teacher, Currency
 
 
 
@@ -232,3 +232,16 @@ class UpdateView(View):
         if student_form.is_valid():
             student_form.save()
         return redirect(reverse('students'))
+
+
+class CurrencyView(View):
+    """Displays currency list"""
+    def get(self, request):
+        """Gets all the data info of currency
+        in the model and transfers it to the template"""
+        # compile_task.delay()
+        currencies = Currency.objects.all()
+        return render(
+            request=request,
+            template_name='currency.html',
+            context={"currencies": currencies, "title" : "Currency"} )
