@@ -3,7 +3,7 @@ import uuid
 from django.core.management import BaseCommand
 from faker import Faker
 from home.models import Student, Subject, Book, Teacher
-
+import random
 
 class Command(BaseCommand):
 
@@ -20,13 +20,18 @@ class Command(BaseCommand):
         in the model "Student"."""
         faker = Faker()
 
+        subjects_name = ["Python", "Java", "Math", "History"]
+
         for _ in range(options['len']):
+
             self.stdout.write('Start inserting Students')
             book = Book()
             book.title = uuid.uuid4()
             book.save()
 
-            subject, _ = Subject.objects.get_or_create(title='Python')
+            subject, _ = Subject.objects.get_or_create(title=random.choice(subjects_name))
+            subject.save()
+
 
             student = Student()
             student.name = faker.first_name()

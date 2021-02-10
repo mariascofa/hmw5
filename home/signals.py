@@ -6,10 +6,10 @@ from django.dispatch import receiver
 
 from home.models import Student
 
-@receiver(pre_delete, sender=Student)
-def delete_student(**kwargs):
-    """Doesn't let to delete students from a data base."""
-    raise Exception ("don't delete")
+# @receiver(pre_delete, sender=Student)
+# def delete_student(**kwargs):
+#     """Doesn't let to delete students from a data base."""
+#     raise Exception ("don't delete")
 
 @receiver(pre_save, sender=Student)
 def pre_save_sex(sender, instance,  **kwargs):
