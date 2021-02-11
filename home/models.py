@@ -1,5 +1,6 @@
 import django_filters
 from django.db import models
+from django.contrib.postgres.fields import JSONField
 
 
 
@@ -22,8 +23,6 @@ class Student(models.Model):
     subject = models.ForeignKey('home.Subject', on_delete=models.SET_NULL, null=True, related_name="student")
 
 
-
-
 class Subject(models.Model):
     title = models.CharField(max_length=200)
 
@@ -35,5 +34,14 @@ class Teacher(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     students = models.ManyToManyField('home.Student', related_name="teacher")
+
+class Currency(models.Model):
+    ccy = models.CharField(max_length=200)
+    base = models.CharField(max_length=200)
+    buy = models.CharField(max_length=200)
+    sale = models.CharField(max_length=200)
+
+
+
 
 

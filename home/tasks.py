@@ -1,17 +1,24 @@
-from hmw5.celery import app
+import requests
 from celery import chain, shared_task
+from home.models import Currency
 
 @shared_task
-def add (*args):
-    return sum (args)
+def parse_private ():
+    response =requests.get("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
+    titles=response.json()
+    return titles
 
+@shared_task
+def get_private (titles):
+    Currency.objects.all().delete()
+    for title in titles:
+        Currency.objects.create(ccy=title['ccy'], base=title['base_ccy'], buy=title['buy'], sale=title['sale'])
 
 
 @shared_task
 def compile_task ():
     chain (
-        add.s(4,6)
+        parse_private.s()
         |
-        add.s(3,4)
-    ) ()
-
+        get_private.s()
+    )()
