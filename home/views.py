@@ -1,4 +1,6 @@
-from django.http import HttpResponseRedirect
+import csv
+
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.views.generic.base import View
@@ -245,3 +247,52 @@ class CurrencyView(View):
             request=request,
             template_name='currency.html',
             context={"currencies": currencies, "title" : "Currency"} )
+
+class CSVView(View):
+
+    def get(self, request):
+        response = HttpResponse(content_type="text/csv")
+
+        response['Content-Disposition'] = "attachment; filename=all_students.csv"
+
+        writer_for_response = csv.writer(response)
+        writer_for_response.writerow(["ID", "Name", "Surname", "Age", "Sex", "Address",
+                                      "Birthday", "Email", "Social Url", "Book", "Subject",])
+
+        students = Student.objects.all()
+        for student in students:
+            writer_for_response.writerow([
+                student.id,
+                student.name,
+                student.surname,
+                student.age,
+                student.sex,
+                student.address,
+                student.birthday,
+                student.email,
+                student.social_url if student.book else None,
+                student.book.title if student.book else None,
+                student.subject.title if student.subject else None,
+            ])
+        return response
+
+class JsonView(View):
+
+    def get(self, request):
+        students = Student.objects.all()
+        return JsonResponse({
+            "students": list(students.values(
+                "id",
+                "name",
+                "surname",
+                "age",
+                "sex",
+                "address",
+                "birthday",
+                "email",
+                "social_url",
+                "book__title",
+                "subject__title",
+            )),
+        })
+
