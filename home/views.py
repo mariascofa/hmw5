@@ -1,8 +1,12 @@
 import csv
+from time import sleep
 
+from django.conf import settings
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, request
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.base import View
 
@@ -195,11 +199,14 @@ class TeacherDeleteView(View):
 #             template_name='index.html',
 #             context={"students": students, "title" : "Students", "myFilter": myFilter} )
 
+@method_decorator(cache_page(settings.CACHE_TTL), name="dispatch")
 class StudentView(ListView):
     """Displays a complete list of all students"""
+    sleep(20)
     model= Student
     template_name = "student_list.html"
     context_object_name = 'students'
+
 
 
 # class CreateView (View):
