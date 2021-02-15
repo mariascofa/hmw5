@@ -1,7 +1,7 @@
 
 {% extends "base.html" %}
 
-{% block title %} {{title}} {% endblock %}
+{% block title %} Students {% endblock %}
 
 {% block body_content %}
 
@@ -33,23 +33,6 @@
 
 
 
-        <p><center> <H2 class="jumbotron-heading">Filter by:</H2></center>
-
-           <form method="GET ">
-    <input type = "hidden" name= "csrf_token" value="{{csrf_token}}">
-    {% csrf_token %}
-<center>
-              <strong> {{ myFilter.form }} </strong>
-
-                    <div class="btn-group">
-                      <button type="submit" class="btn btn-sm btn-outline-secondary"> Filter </button> </a>
-                    </div>
-</center> </p>
-
-              </form>
-
-
-
 
      <div class="album py-5 bg-dark">
 
@@ -76,8 +59,13 @@
 
 
                     <div class="btn-group">
-                      <a href="{% url 'update' id=student.id %}">
+                      <a href="{% url 'update' pk=student.id %}">
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
+                    </div>
+
+                                        <div class="btn-group">
+                      <a href="{% url 'delete' pk=student.id %}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button></a>
                     </div>
 
                 </div>

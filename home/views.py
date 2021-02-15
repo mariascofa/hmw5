@@ -1,9 +1,12 @@
 import csv
 
-from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, request
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.base import View
+
+from home.emails import send_email
 from home.tasks import compile_task
 from crispy_forms.utils import render_crispy_form
 from home.filter import StudentFilter
@@ -178,62 +181,92 @@ class TeacherDeleteView(View):
         return HttpResponseRedirect(reverse('update_teacher', args=[teacher_id]))
 
 
-class StudentView(View):
+# class StudentView(View):
+#     """Displays a complete list of all students"""
+#     def get(self, request):
+#         """Gets all the data info of the each
+#         student in the model and transfers it to the template"""
+#         compile_task.delay()
+#         students = Student.objects.all()
+#         myFilter = StudentFilter(request.GET, queryset= students)
+#         students = myFilter.qs
+#         return render(
+#             request=request,
+#             template_name='index.html',
+#             context={"students": students, "title" : "Students", "myFilter": myFilter} )
+
+class StudentView(ListView):
     """Displays a complete list of all students"""
-    def get(self, request):
-        """Gets all the data info of the each
-        student in the model and transfers it to the template"""
-        compile_task.delay()
-        students = Student.objects.all()
-        myFilter = StudentFilter(request.GET, queryset= students)
-        students = myFilter.qs
-        return render(
-            request=request,
-            template_name='index.html',
-            context={"students": students, "title" : "Students", "myFilter": myFilter} )
+    model= Student
+    template_name = "student_list.html"
+    context_object_name = 'students'
 
 
-class CreateView (View):
+# class CreateView (View):
+#     """Allows you to create new students
+#     through a form and add their info to the database."""
+#     def get(self, request):
+#         """Generates the form and transfers it to the template."""
+#         student_form = StudentForm()
+#         context = {"form": student_form, "title" : "Create" }
+#         return render(request, "form_index.html", context=context)
+#
+#     def post(self, request):
+#         """Gets data from a form and
+#         saves it to the table (in case if all the info
+#         is valid)."""
+#         student_form = StudentForm(request.POST)
+#
+#         if student_form.is_valid():
+#             student_form.save()
+#         return redirect(reverse('students'))
+
+class CreateView (CreateView):
     """Allows you to create new students
     through a form and add their info to the database."""
-    def get(self, request):
-        """Generates the form and transfers it to the template."""
-        student_form = StudentForm()
-        context = {"form": student_form, "title" : "Create" }
-        return render(request, "form_index.html", context=context)
+    model= Student
+    template_name = "student_create.html"
+    fields= ["name", "surname", "sex", "age", "address", "birthday", "email",
+             "social_url", "description"]
+    success_url = reverse_lazy ('students')
 
-    def post(self, request):
-        """Gets data from a form and
-        saves it to the table (in case if all the info
-        is valid)."""
-        student_form = StudentForm(request.POST)
+# class UpdateView(View):
+#     """Allows you to update student's info
+#     through a form and add updated info to the database."""
+#     def get (self, request, id):
+#         """Gets a date of the student under
+#         selected id, generates a form with the info
+#         of this student. User can update all the info in this form."""
+#         students = get_object_or_404(Student, id=id)
+#         student_form = StudentForm(instance=students)
+#         context = {"form": student_form, "student": students, "title" : "Update"}
+#         return render(request, "update.html", context=context)
+#
+#     def post (self, request, id):
+#         """Gets updated data from a form and
+#         saves it to the table (in case if all the info
+#         is valid)."""
+#         students = get_object_or_404(Student, id=id)
+#         student_form = StudentForm(request.POST, instance=students)
+#         if student_form.is_valid():
+#             student_form.save()
+#         return redirect(reverse('students'))
 
-        if student_form.is_valid():
-            student_form.save()
-        return redirect(reverse('students'))
+class UpdateView(UpdateView):
+    """Allows you to create new students
+    through a form and add their info to the database."""
+    model= Student
+    template_name = "update_student.html"
+    fields= ["name", "surname", "sex", "age", "address", "birthday", "email",
+             "social_url", "description"]
+    success_url = reverse_lazy ('students')
 
-
-class UpdateView(View):
-    """Allows you to update student's info
-    through a form and add updated info to the database."""
-    def get (self, request, id):
-        """Gets a date of the student under
-        selected id, generates a form with the info
-        of this student. User can update all the info in this form."""
-        students = get_object_or_404(Student, id=id)
-        student_form = StudentForm(instance=students)
-        context = {"form": student_form, "student": students, "title" : "Update"}
-        return render(request, "update.html", context=context)
-
-    def post (self, request, id):
-        """Gets updated data from a form and
-        saves it to the table (in case if all the info
-        is valid)."""
-        students = get_object_or_404(Student, id=id)
-        student_form = StudentForm(request.POST, instance=students)
-        if student_form.is_valid():
-            student_form.save()
-        return redirect(reverse('students'))
+class DeleteView(DeleteView):
+    """Allows you to delete chosen student
+    from the students list."""
+    model= Student
+    template_name = "delete.html"
+    success_url = reverse_lazy ('students')
 
 
 class CurrencyView(View):
@@ -295,4 +328,10 @@ class JsonView(View):
                 "subject__title",
             )),
         })
+
+class SendEmailView(View):
+    def get(self, request):
+        send_email (recipient_list=["mariascofa@gmail.com",])
+
+        return HttpResponse("Email has been sent!")
 

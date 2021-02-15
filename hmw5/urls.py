@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from home.views import StudentView, CreateView, UpdateView, BookView, SubjectView, TeachersView, BookDeleteView, \
     SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView,\
-    CurrencyView, CSVView, JsonView
+    CurrencyView, CSVView, JsonView, SendEmailView, DeleteView
 
 
 
@@ -28,7 +28,8 @@ urlpatterns = [
     path('teachers/', TeachersView.as_view(), name='teachers'),
     path('', StudentView.as_view(), name='students'),
     path("students/create/", CreateView.as_view(), name='create'),
-    path("students/update/<id>/", UpdateView.as_view(), name="update"),
+    path("students/update/<pk>/", UpdateView.as_view(), name="update"),
+    path("students/delete/<pk>/", DeleteView.as_view(), name="delete"),
     path("books/", BookView.as_view(), name="book"),
     path("books/delete/<id>/", BookDeleteView.as_view(), name="delete_book"),
     path("subjects/update/<id>/", SubjectUpdateView.as_view(), name="update_subject"),
@@ -39,5 +40,6 @@ urlpatterns = [
     path("teacher/update/<teacher_id>/<student_id>/", TeacherStudentView.as_view(), name="teacher_student"),
     path("json/", JsonView.as_view(), name="json"),
     path("css/", CSVView.as_view(), name="css"),
+    path("email/", SendEmailView.as_view(), name="email"),
 ]
 
