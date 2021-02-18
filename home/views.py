@@ -202,7 +202,6 @@ class TeacherDeleteView(View):
 @method_decorator(cache_page(settings.CACHE_TTL), name="dispatch")
 class StudentView(ListView):
     """Displays a complete list of all students"""
-    sleep(20)
     model= Student
     template_name = "student_list.html"
     context_object_name = 'students'

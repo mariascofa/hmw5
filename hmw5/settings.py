@@ -29,10 +29,14 @@ SECRET_KEY = 'fl02y0vx6i9=w2co&u5fd&kg-kwpg4dci*o%c)*-(vjpuj^8$@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0",
+    "127.0.0.1"
+]
+
+STATIC_ROOT = "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/static"
 
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
