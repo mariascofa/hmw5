@@ -38,5 +38,4 @@ cython_debug/
 .log/
 example.log
 celery_results.sqlite3
-
 /static
