@@ -6,6 +6,8 @@
 {% block body_content %}
 
 
+
+
     <header>
       <div class="navbar navbar-dark bg-dark box-shadow">
       </div>
@@ -33,12 +35,18 @@
 
 
 
-
      <div class="album py-5 bg-dark">
 
         <div class="container">
           <div class="row">
+
+
+{% if user.is_authenticated %}
+{{ user.is_authenticated }}
                {% for student in students %}
+
+
+
             <div class="col-md-3">
               <div class="card mb-4 box-shadow">
                 <h2> {{ student.name }} {{ student.surname }}</h2>
@@ -71,7 +79,12 @@
                 </div>
               </div>
             </div>
-         {% endfor %}
+
+{% endfor %}
+{% else %}
+ <div class="album py-5 bg-white">Please login! </div>
+{% endif %}
+
           </div>
         </div>
       </div>

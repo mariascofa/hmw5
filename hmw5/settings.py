@@ -30,8 +30,7 @@ SECRET_KEY = 'fl02y0vx6i9=w2co&u5fd&kg-kwpg4dci*o%c)*-(vjpuj^8$@'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "0.0.0.0",
-    "127.0.0.1"
+    "0.0.0.0", '127.0.0.1', 'localhost'
 ]
 
 
@@ -165,4 +164,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mariascofa@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_PASSWORD = 'Snorkmaiden12!'

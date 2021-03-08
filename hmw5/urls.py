@@ -19,10 +19,8 @@ from django.urls import path
 from django.views.decorators.cache import cache_page
 
 from home.views import StudentView, CreateView, UpdateView, BookView, SubjectView, TeachersView, BookDeleteView, \
-    SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView,\
-    CurrencyView, CSVView, JsonView, SendEmailView, DeleteView
-
-
+    SubjectUpdateView, DeleteSubjectView, TeacherUpdateView, TeacherDeleteView, AddStudentView, TeacherStudentView, \
+    CurrencyView, CSVView, JsonView, SendEmailView, DeleteView, Register, ActivateView, Logout, Login
 
 urlpatterns = [
     path('currency/', CurrencyView.as_view(), name='currency'),
@@ -40,9 +38,13 @@ urlpatterns = [
     path("teachers/update/<id>/", TeacherUpdateView.as_view(), name="update_teacher"),
     path("teachers/delete/<student_id>/<teacher_id>/", TeacherDeleteView.as_view(), name="delete_teacher"),
     path("subjects/update/<subject_id>/<student_id>/", AddStudentView.as_view(), name="add_student"),
+    path("register", Register.as_view(), name="register"),
     path("teacher/update/<teacher_id>/<student_id>/", TeacherStudentView.as_view(), name="teacher_student"),
     path("json/", JsonView.as_view(), name="json"),
     path("css/", CSVView.as_view(), name="css"),
     path("email/", SendEmailView.as_view(), name="email"),
+    path('activate/<uid>/<token>', ActivateView.as_view(), name='activate_view'),
+    path('logout', Logout.as_view(), name='logout'),
+    path('login', Login.as_view(), name='login'),
 ]
 
