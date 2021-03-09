@@ -240,6 +240,20 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "gunicorn"
+version = "20.0.4"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.4"
+
+[package.extras]
+eventlet = ["eventlet (>=0.9.7)"]
+gevent = ["gevent (>=0.13)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "idna"
 version = "2.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -433,7 +447,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8"
-content-hash = "b9b24f46b8e4853c03d2b84ff973c0ac9f33beaf1d390d90a578f44dd2bbceba"
+content-hash = "fec8b88222a4fd2ba7e4f21a3c2293b3da46fb253f0c6408b7f25a845433afe9"
 
 [metadata.files]
 amqp = [
@@ -551,6 +565,10 @@ flake8 = [
 gender-guesser = [
     {file = "gender-guesser-0.4.0.tar.gz", hash = "sha256:1591c14592805ca7da06a46d5f7202511f7cb87547049a68dfccbeedb879f31b"},
     {file = "gender_guesser-0.4.0-py2.py3-none-any.whl", hash = "sha256:7cb01ce5d8d43b94573498bc02c959b622872abd399622ca67d1b73ba6e7e222"},
+]
+gunicorn = [
+    {file = "gunicorn-20.0.4-py2.py3-none-any.whl", hash = "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"},
+    {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
