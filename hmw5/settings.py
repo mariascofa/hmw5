@@ -151,6 +151,8 @@ STATIC_URL = '/static/'
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'db+sqlite:///celery_results.sqlite3'
 
+MEDIA_ROOT = "/home/ubuntu/PycharmProjects/Homewrk5/hmw5/media"
+MEDIA_URL = "media/"
 
 CELERY_BEAT_SCHEDULE = {
     'update_transaction_status': {
@@ -164,4 +166,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mariascofa@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_PASSWORD = 'password '

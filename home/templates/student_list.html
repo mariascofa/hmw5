@@ -49,6 +49,11 @@
 
             <div class="col-md-3">
               <div class="card mb-4 box-shadow">
+                  {% if student.picture %}
+                  <img src = "/media/{{student.picture}}" width="120" height="150">
+                  {% else %}
+                  <img src = "/media/student_photos/icon.png" width="150" height="150">
+                  {% endif %}
                 <h2> {{ student.name }} {{ student.surname }}</h2>
                 <div class="card-body">
 

@@ -9,7 +9,7 @@ class StudentForm(ModelForm):
 
     class Meta:
         model = Student
-        fields = ["name", "surname", "age", "sex", "address",
+        fields = ["name", "picture", "surname", "age", "sex", "address",
                   "description", "birthday", "email", "social_url"]
 
 

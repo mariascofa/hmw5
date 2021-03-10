@@ -22,6 +22,8 @@ class Student(models.Model):
     book = models.OneToOneField('home.Book', on_delete=models.CASCADE, null=True, related_name="student")
     subject = models.ForeignKey('home.Subject', on_delete=models.SET_NULL, null=True, related_name="student")
 
+    picture = models.ImageField(upload_to= "student_photos/", null=True)
+
 
 class Subject(models.Model):
     title = models.CharField(max_length=200)
