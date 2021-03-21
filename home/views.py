@@ -252,7 +252,7 @@ class CreateView(CreateView):
     model = Student
     template_name = "student_create.html"
     fields = ["name", "surname", "sex", "age", "address", "birthday", "email",
-              "social_url", "description"]
+              "social_url", "description", "picture"]
     success_url = reverse_lazy('students')
 
 
@@ -283,7 +283,7 @@ class UpdateView(UpdateView):
     through a form and add their info to the database."""
     model = Student
     template_name = "update_student.html"
-    fields = ["name", "surname", "sex", "age", "address", "birthday", "email",
+    fields = ["name", "surname", "sex", "age", "address", "birthday", "email", "picture",
               "social_url", "description"]
     success_url = reverse_lazy('students')
 
