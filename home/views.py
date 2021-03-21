@@ -15,8 +15,10 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.base import View
+from rest_framework.viewsets import ModelViewSet
 
 from home.emails import send_email
+from home.serializers import StudentSerializer, TeacherSerializer, SubjectSerializer, BookSerializer
 from home.tasks import compile_task
 from crispy_forms.utils import render_crispy_form
 
@@ -460,5 +462,20 @@ class Login(View):
         return redirect(reverse('students'))
 
 
+class StudentViewSet(ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+class SubjectViewSet(ModelViewSet):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
+
+class TeacherViewSet(ModelViewSet):
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializer
+
+class BookViewSet(ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
 
 
