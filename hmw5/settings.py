@@ -49,11 +49,17 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_extensions',
     'django_filters',
+    'corsheaders',
+    'rest_framework',
+    'drf_yasg',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,6 +72,8 @@ MIDDLEWARE = [
     'hmw5.middleware.LogMiddleware',
     'hmw5.middleware.IdentifyResponseMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL=True
 
 ROOT_URLCONF = 'hmw5.urls'
 
