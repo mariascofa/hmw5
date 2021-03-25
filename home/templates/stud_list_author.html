@@ -41,7 +41,8 @@
           <div class="row">
 
 
-
+<!--{% if user.is_authenticated %}-->
+<!--{{ user.is_authenticated }}-->
                {% for student in students %}
 
 
@@ -85,7 +86,9 @@
             </div>
 
 {% endfor %}
-
+{% else %}
+ <div class="album py-5 bg-white">Please login! </div>
+{% endif %}
 
           </div>
         </div>

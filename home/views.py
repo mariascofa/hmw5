@@ -15,9 +15,13 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.base import View
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.viewsets import ModelViewSet
 
 from home.emails import send_email
+from home.filter import StudentFilter
 from home.serializers import StudentSerializer, TeacherSerializer, SubjectSerializer, BookSerializer
 from home.tasks import compile_task
 from crispy_forms.utils import render_crispy_form
@@ -465,17 +469,35 @@ class Login(View):
 class StudentViewSet(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
+    filter_class = StudentFilter
+    ordering = ['name']
+
 
 class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
+    filter_fields = ("title",)
+    ordering = ['title']
 
 class TeacherViewSet(ModelViewSet):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
+    filter_fields = ("name",)
+    ordering = ['name']
 
 class BookViewSet(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+    pagination_class = PageNumberPagination
+    filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
+    filter_fields = ("title",)
+    ordering = ['title']
+
 
 
