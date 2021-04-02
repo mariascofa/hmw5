@@ -1,4 +1,4 @@
-import uuid
+
 
 from django.core.paginator import Paginator
 from rest_framework import serializers
