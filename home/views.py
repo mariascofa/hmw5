@@ -482,7 +482,8 @@ class StudentViewSet(ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         """Allows you to create new students
-        and add their info to the database."""
+        and add their info to the database.In case of exception
+        transaction does not allows book's info to be saved"""
         serializer = self.get_serializer(data=request.data)
 
         serializer.is_valid(raise_exception=True)
@@ -503,6 +504,8 @@ class StudentViewSet(ModelViewSet):
 
     # @transaction.atomic
     # def create(self, request, *args, **kwargs):
+    #     """Allows you to create new student and add their info to the database. In case of exception
+    #     transaction does not allow all student's info to be saved"""
     #     serializer = self.get_serializer(data=request.data)
     #     serializer.is_valid(raise_exception=True)
     #     student = serializer.save()
