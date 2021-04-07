@@ -502,22 +502,6 @@ class StudentViewSet(ModelViewSet):
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    # @transaction.atomic
-    # def create(self, request, *args, **kwargs):
-    #     """Allows you to create new student and add their info to the database. In case of exception
-    #     transaction does not allow all student's info to be saved"""
-    #     serializer = self.get_serializer(data=request.data)
-    #     serializer.is_valid(raise_exception=True)
-    #     student = serializer.save()
-    #     book = Book()
-    #     book.title = uuid.uuid4()
-    #     book.save()
-    #     student.book = book
-    #     student.save()
-    #     raise Exception
-    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
 class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
