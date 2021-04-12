@@ -13,19 +13,19 @@ class SubjectSerializer(serializers.ModelSerializer):
         fields = ["title"]
 
 class TeacherSerializer(serializers.ModelSerializer):
-    students = serializers.SerializerMethodField("paginated_students")
+    # students = serializers.SerializerMethodField("paginated_students")
 
-    def paginated_students(self,obj):
-        students = Student.objects.all()
-
-        pagination = Paginator(students, per_page=2)
-        pagination_students = pagination.page(1)
-
-        return StudentSerializer(instance=pagination_students,many=True).data
+    # def paginated_students(self,obj):
+    #     students = Student.objects.all()
+    #
+    #     pagination = Paginator(students, per_page=2)
+    #     pagination_students = pagination.page(1)
+    #
+    #     return StudentSerializer(instance=pagination_students,many=True).data
 
     class Meta:
         model = Teacher
-        fields = ["name", "students"]
+        fields = ["name"]
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,6 +35,7 @@ class BookSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ["name", "surname", "age", "sex", "book"]
+        fields = ["name", "surname", "book"]
         read_only_fields = ('book',)
+
 
