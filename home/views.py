@@ -500,6 +500,7 @@ class StudentViewSet(ModelViewSet):
         except Exception:
             print("An exception occurred")
 
+
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class SubjectViewSet(ModelViewSet):
@@ -517,6 +518,8 @@ class TeacherViewSet(ModelViewSet):
     filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
     filter_fields = ("name",)
     ordering = ['name']
+
+    
 
 class BookViewSet(ModelViewSet):
     queryset = Book.objects.all()

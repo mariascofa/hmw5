@@ -10,7 +10,7 @@ from home.models import Student, Subject, Teacher, Book
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
-        fields = ["title"]
+        fields = ["title", "created_at", "updated_at"]
 
 class TeacherSerializer(serializers.ModelSerializer):
     # students = serializers.SerializerMethodField("paginated_students")
@@ -25,17 +25,17 @@ class TeacherSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Teacher
-        fields = ["name"]
+        fields = ["name", "created_at", "updated_at"]
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ["title"]
+        fields = ["title", "created_at", "updated_at"]
 
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ["name", "surname", "book"]
+        fields = ["name", "surname", "book", "created_at", "updated_at"]
         read_only_fields = ('book',)
 
 
