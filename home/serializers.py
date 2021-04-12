@@ -1,3 +1,5 @@
+
+
 from django.core.paginator import Paginator
 from rest_framework import serializers
 
@@ -25,16 +27,14 @@ class TeacherSerializer(serializers.ModelSerializer):
         model = Teacher
         fields = ["name", "students"]
 
-class StudentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Student
-
-
-        # def list (self, request, *args, **kwargs):
-
-        fields = ["name", "surname", "age", "sex",]
-
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ["title"]
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Student
+        fields = ["name", "surname", "age", "sex", "book"]
+        read_only_fields = ('book',)
+

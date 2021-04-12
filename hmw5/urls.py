@@ -49,6 +49,7 @@ router.register(r'subjects/viewset',SubjectViewSet, basename='subjects')
 router.register(r'teachers/viewset',TeacherViewSet, basename='teachers')
 router.register(r'books/viewset',BookViewSet, basename='books')
 
+
 urlpatterns = [
     url(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

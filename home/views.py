@@ -1,4 +1,5 @@
 import csv
+import uuid
 from time import sleep
 
 from django.conf import settings
@@ -6,6 +7,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.tokens import default_token_generator
+from django.db import transaction
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse, request
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -16,6 +18,7 @@ from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.base import View
 from django_filters.rest_framework import DjangoFilterBackend
+from requests import Response
 from rest_framework import filters
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.viewsets import ModelViewSet
@@ -25,6 +28,9 @@ from home.filter import StudentFilter
 from home.serializers import StudentSerializer, TeacherSerializer, SubjectSerializer, BookSerializer
 from home.tasks import compile_task
 from crispy_forms.utils import render_crispy_form
+from rest_framework import status
+from rest_framework.response import Response
+
 
 
 from home.forms import StudentForm, SubjectForm, TeacherForm, SignUpForm, UserSignUpForm
@@ -467,12 +473,49 @@ class Login(View):
 
 
 class StudentViewSet(ModelViewSet):
-    queryset = Student.objects.all()
+    queryset = Student.objects.all() 
     serializer_class = StudentSerializer
     pagination_class = PageNumberPagination
     filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
     filter_class = StudentFilter
     ordering = ['name']
+
+    def create(self, request, *args, **kwargs):
+        """Allows you to create new students
+        and add their info to the database.In case of exception
+        transaction does not allows book's info to be saved"""
+        serializer = self.get_serializer(data=request.data)
+
+        serializer.is_valid(raise_exception=True)
+        student = serializer.save()
+
+        try:
+            with transaction.atomic():
+                book = Book()
+                book.title = uuid.uuid4()
+                book.save()
+                student.book = book
+                student.save()
+                # raise Exception
+        except Exception:
+            print("An exception occurred")
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    # @transaction.atomic
+    # def create(self, request, *args, **kwargs):
+    #     """Allows you to create new student and add their info to the database. In case of exception
+    #     transaction does not allow all student's info to be saved"""
+    #     serializer = self.get_serializer(data=request.data)
+    #     serializer.is_valid(raise_exception=True)
+    #     student = serializer.save()
+    #     book = Book()
+    #     book.title = uuid.uuid4()
+    #     book.save()
+    #     student.book = book
+    #     student.save()
+    #     raise Exception
+    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class SubjectViewSet(ModelViewSet):
@@ -498,6 +541,5 @@ class BookViewSet(ModelViewSet):
     filter_backends = (DjangoFilterBackend,filters.OrderingFilter)
     filter_fields = ("title",)
     ordering = ['title']
-
 
 
