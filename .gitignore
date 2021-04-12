@@ -39,3 +39,4 @@ cython_debug/
 example.log
 celery_results.sqlite3
 /static
+/htmlcov
