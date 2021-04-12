@@ -21,21 +21,29 @@ class Student(models.Model):
     social_url = models.CharField(max_length=200, null=True)
     book = models.OneToOneField('home.Book', on_delete=models.CASCADE, null=True, related_name="student")
     subject = models.ForeignKey('home.Subject', on_delete=models.SET_NULL, null=True, related_name="student")
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     picture = models.ImageField(upload_to= "student_photos/", null=True)
 
 
 class Subject(models.Model):
     title = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
 class Book (models.Model) :
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
 class Teacher(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     students = models.ManyToManyField('home.Student', related_name="teacher")
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
 class Currency(models.Model):
     ccy = models.CharField(max_length=200)
